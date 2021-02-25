@@ -1,0 +1,5 @@
+discordbeat
+Copyright {year} Andrew Wilson
+
+This product includes software developed by The Apache Software
+Foundation (http://www.apache.org/).
