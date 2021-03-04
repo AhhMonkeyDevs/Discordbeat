@@ -6518,8 +6518,80 @@
   title: discordbeat
   description:
   fields:
-    - name: counter
+    - name: id
       type: long
-      required: true
       description: >
-        PLEASE UPDATE DOCUMENTATION
+        Message ID snowflake
+    - name: channel_id
+      type: long
+      description: >
+        Channel ID (snowflake) the message was sent in
+    - name: guild_id
+      type: long
+      description: >
+        Snowflake of the guild the message was sent in
+    - name: author_id
+      type: long
+      description: >
+        Snowflake of the author who sent the message
+    - name: author_type
+      type: byte
+      description: >
+        - Whether the author is a user, bot or webhook
+    - name: type
+      type: short
+      description: >
+        - The type of message (regular chat message, system message, etc.)
+    - name: user_mentions
+      type: long
+      description: >
+        - Snowflake of mentioned users
+    - name: role_mentions
+      type: long
+      description: >
+        - Snowflake of mentioned roles
+    - name: channel_mentions
+      type: long
+      description: >
+        - Snowflake of mentioned channels
+    - name: content
+      type: text
+      description: >
+        Contents of the message
+    - name: tts
+      type: boolean
+      description: >
+        Whether the message was a TTS message
+    - name: mention_everyone
+      type: boolean
+      description: >
+        Whether the message mentioned everyone
+    - name: link_hostnames
+      type: keyword
+      description: >
+        Array of hostnames in the message
+    - name: has
+      type: short
+      description: >
+        array of shorts specifying the type of media the message has
+    - name: attachment_filenames
+      type: text
+      analyzer: simple
+      description: >
+        array specifying file names
+    - name: attachment_extensions
+      type: keyword
+      description: >
+        array specifying file extensions
+    - name: referenced_message
+      type: long
+      description: >
+        id of the message this one is a reply to
+    - name: created_timestamp
+      type: date
+      description: >
+        timestamp of message creation
+    - name: edited_timestamp
+      type: date
+      description: >
+        timestamp of message edit

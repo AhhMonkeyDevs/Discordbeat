@@ -174,15 +174,193 @@ alias to: cloud.region
 None
 
 
-*`counter`*::
+*`id`*::
 +
 --
-PLEASE UPDATE DOCUMENTATION
+Message ID snowflake
 
 
 type: long
 
-required: True
+--
+
+*`channel_id`*::
++
+--
+Channel ID (snowflake) the message was sent in
+
+
+type: long
+
+--
+
+*`guild_id`*::
++
+--
+Snowflake of the guild the message was sent in
+
+
+type: long
+
+--
+
+*`author_id`*::
++
+--
+Snowflake of the author who sent the message
+
+
+type: long
+
+--
+
+*`author_type`*::
++
+--
+- Whether the author is a user, bot or webhook
+
+
+type: byte
+
+--
+
+*`type`*::
++
+--
+- The type of message (regular chat message, system message, etc.)
+
+
+type: short
+
+--
+
+*`user_mentions`*::
++
+--
+- Snowflake of mentioned users
+
+
+type: long
+
+--
+
+*`role_mentions`*::
++
+--
+- Snowflake of mentioned roles
+
+
+type: long
+
+--
+
+*`channel_mentions`*::
++
+--
+- Snowflake of mentioned channels
+
+
+type: long
+
+--
+
+*`content`*::
++
+--
+Contents of the message
+
+
+type: text
+
+--
+
+*`tts`*::
++
+--
+Whether the message was a TTS message
+
+
+type: boolean
+
+--
+
+*`mention_everyone`*::
++
+--
+Whether the message mentioned everyone
+
+
+type: boolean
+
+--
+
+*`link_hostnames`*::
++
+--
+Array of hostnames in the message
+
+
+type: keyword
+
+--
+
+*`has`*::
++
+--
+array of shorts specifying the type of media the message has
+
+
+type: short
+
+--
+
+*`attachment_filenames`*::
++
+--
+array specifying file names
+
+
+type: text
+
+--
+
+*`attachment_extensions`*::
++
+--
+array specifying file extensions
+
+
+type: keyword
+
+--
+
+*`referenced_message`*::
++
+--
+id of the message this one is a reply to
+
+
+type: long
+
+--
+
+*`created_timestamp`*::
++
+--
+timestamp of message creation
+
+
+type: date
+
+--
+
+*`edited_timestamp`*::
++
+--
+timestamp of message edit
+
+
+type: date
 
 --
 

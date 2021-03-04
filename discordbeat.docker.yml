@@ -1,5 +1,10 @@
+################### {Beat} Configuration Example #########################
+
+############################# {Beat} ######################################
+
 discordbeat:
-  period: 1s
+  # Specifies bot token to login to Discord with
+  token: "INSERT-TOKEN-HERE"
 
 processors:
   - add_cloud_metadata: ~
